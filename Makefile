@@ -31,7 +31,7 @@ RM = rm -f
 # Default make target
 .DEFAULT_GOAL := all
 .PHONY: all
-all: ListTest.class LinkedList.class
+all: ListTest.class LinkedList.class Node.class
 
 # Execute program for testing
 .PHONY: exec
