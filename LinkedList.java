@@ -1,10 +1,16 @@
 class LinkedList {
 
+  private Node head = new Node();
+
   public LinkedList () {
   }
 
   public boolean isEmpty () {
-    return true;
+    if (head.getPointer() == null) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   public void insert (int d) {
