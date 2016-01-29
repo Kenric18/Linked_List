@@ -3,6 +3,10 @@ public class Node {
 	private int nodeValue;
 	private Node pointer;
 
+	public Node() {
+		pointer = null;
+	}
+
 	public Node(int nodeValue) {
 		this.nodeValue = nodeValue;
 	}
