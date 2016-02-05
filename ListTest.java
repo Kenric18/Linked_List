@@ -16,14 +16,14 @@ class ListTest {
         System.out.println (l + " is not in the list");
       }
     }
-
+/*
     while (!list.isEmpty()) {
       int d = list.delete();
       System.out.println("deleted: " + d);
     }
 
     list.print ();
-
+   */
   }
 
 }

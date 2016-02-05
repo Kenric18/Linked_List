@@ -7,10 +7,6 @@ public class Node {
 		pointer = null;
 	}
 
-	public Node(int nodeValue) {
-		this.nodeValue = nodeValue;
-	}
-
 	public Node(int nodeValue, Node pointer) {
 		this.nodeValue = nodeValue;
 		this.pointer = pointer;
@@ -26,6 +22,10 @@ public class Node {
 
 	public Node getPointer() {
 		return pointer;
+	}
+
+	public void setPointer(Node pointer) {
+		this.pointer = pointer;
 	}
 
 

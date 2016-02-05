@@ -1,8 +1,12 @@
 class LinkedList {
 
-  private Node head = new Node();
+  private Node head;
+  private Node referenceNode;
+  private Node iterator;
 
   public LinkedList () {
+    head = new Node();
+    iterator = head;
   }
 
   public boolean isEmpty () {
@@ -14,6 +18,16 @@ class LinkedList {
   }
 
   public void insert (int d) {
+    if(isEmpty()) {
+      referenceNode = new Node(d, null);
+      head.setPointer(referenceNode);
+    } else {
+      while (iterator.getPointer() != null) {
+        iterator = iterator.getPointer();
+      }
+      referenceNode = new Node(d, null);
+      iterator.setPointer(referenceNode);
+    }
     return;
   }
 
@@ -22,11 +36,22 @@ class LinkedList {
   }
 
   public boolean has (int d) {
+    iterator = head;
+    while (iterator.getPointer() != null) {
+      iterator = iterator.getPointer();
+      if (iterator.getValue() == d) {
+        return true;
+      }
+    }
     return false;
   }
 
   public void print () {
-    return;
+    iterator = head;
+    while (iterator.getPointer() != null) {
+      iterator = iterator.getPointer();
+      System.out.println(iterator.getValue());
+    }
   }
 
 }
